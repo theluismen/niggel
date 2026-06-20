@@ -1,7 +1,11 @@
-/* Definiciones del VGA Text Mode */
+/* VGA Text Mode Definitions */
 
 #ifndef VGA_COLORS_H
+
 #define VGA_COLORS_H
+
+// VGA Text Buffer Address
+#define VGA_TEXTBUFFER_ADDRESS 0x000B8000
 
 // Colores estándar (Baja intensidad)
 #define VGA_COLOR_BLACK         0x0

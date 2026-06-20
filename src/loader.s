@@ -5,7 +5,7 @@ FLAGS               equ 0x0
 CHECKSUM            equ -(MAGIC_NUMBER + FLAGS)
 KERNEL_STACK_SIZE   equ 4096
 
-extern test
+extern kernel
 
 section .multiboot
 align 4
@@ -18,10 +18,7 @@ section .text
 global _start
 _start:
     mov     esp, kernel_stack + KERNEL_STACK_SIZE
-    push    dword 6
-    push    dword 7
-    call    test
-    add     esp, 8
+    call    kernel
 .end:
     jmp     .end
 
