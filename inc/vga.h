@@ -4,6 +4,8 @@
 
 #define VGA_COLORS_H
 
+#include "types.h"
+
 // VGA Text Buffer Address
 #define VGA_TEXTBUFFER_ADDRESS 0x000B8000
 
@@ -26,5 +28,8 @@
 #define VGA_COLOR_LIGHT_MAGENTA 0xD
 #define VGA_COLOR_LIGHT_BROWN   0xE  // A menudo actúa como Yellow (Amarillo)
 #define VGA_COLOR_WHITE         0xF
+
+// Prints a character in VGA Text Mode
+void vga_print_char ( uint8_t row, uint8_t col, uint8_t bg, uint8_t fg, uint16_t ch );
 
 #endif // VGA_COLORS_H

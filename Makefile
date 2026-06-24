@@ -1,4 +1,4 @@
-OBJECTS = loader.o kernel.o
+OBJECTS = loader.o kernel.o vga.o
 CC = gcc
 CFLAGS = -O0 -m32 -Iinc -nostdlib -nostdinc -fno-builtin -fno-stack-protector -nostartfiles -nodefaultlibs -ffreestanding -Wall -Wextra -Werror -c
 LDFLAGS = -T link.ld -melf_i386
